@@ -1,3 +1,8 @@
+To make your CSS code more responsive for both small and large devices, you can use media queries to adjust the styles accordingly. Below are some adjustments to your existing CSS to enhance its responsiveness. These include changes to font sizes, layout adjustments, and visibility tweaks for different screen sizes.
+
+Here's your modified CSS code:
+
+```css
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
@@ -7,50 +12,44 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
 }
+
 .container {
   width: 100%;
   margin: auto;
-  /* height: 100vh; */
   padding: 30px 40px;
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #243b55,
-    #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #243b55,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #141e30;
+  background: -webkit-linear-gradient(to bottom, #243b55, #141e30);
+  background: linear-gradient(to bottom, #243b55, #141e30);
 }
+
 .container nav {
-  /* background-color: cornsilk; */
   margin-top: 0;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .nav-itemholder {
   width: 80%;
   display: flex;
   justify-content: center;
   gap: 30px;
-  /* padding: 10px; */
 }
+
 .container nav a {
   position: relative;
   text-decoration: none;
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
-  overflow: hidden; /* This is added to hide the ::after content initially */
+  overflow: hidden;
 }
 
 .container nav a::after {
@@ -61,58 +60,62 @@ body {
   background-color: green;
   bottom: 0;
   left: 0;
-  transform: scaleX(0); /* Initially set to zero width */
+  transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
 }
 
 .container nav a:hover::after {
-  transform: scaleX(1); /* Expand the underline on hover */
+  transform: scaleX(1);
   transform-origin: left;
 }
+
 .container nav a:hover {
   color: #808080;
 }
 
-.imagecontaienr {
+.imagecontainer {
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("WhatsApp\ Image\ 2024-01-11\ at\ 16.15.59_5c9ed6fc.jpg");
+  background-image: url("WhatsApp%20Image%202024-01-11%20at%2016.15.59_5c9ed6fc.jpg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 20%;
   background-size: cover;
   overflow: hidden;
 }
+
 .fadeimg {
   position: absolute;
   top: 50%;
-  /* left: 50%; */
   right: -22%;
   transform: translate(-50%, -50%);
   filter: blur(5);
   mix-blend-mode: multiply;
 }
+
 .context {
   margin: 20px 0;
   padding: 10px;
-  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .context h1 {
   color: #fff;
   font-size: 3.2rem;
   letter-spacing: 2px;
 }
+
 .context p {
   color: #444;
   font-size: 1.1em;
   line-height: 2px;
 }
+
 .subcontext p {
   text-align: center;
   padding: 0em 3em;
@@ -121,33 +124,28 @@ body {
   color: #808080;
 }
 
-/* //portfolio  */
 .maincourses {
   margin-top: 8%;
-  /* background-color: #444; */
   text-align: center;
 }
+
 .maincourses h1 {
-  text-overflow: ellipsis;
   text-transform: uppercase;
   color: #fff;
   margin: 1em;
 }
+
 .cardcontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   text-align: center;
-  /* border: 2px solid red; */
 }
+
 .card {
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #243b55,
-    #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #141e30;
+  background: -webkit-linear-gradient(to bottom, #243b55, #141e30);
   background: linear-gradient(to bottom, #243b55, #141e30);
   height: 20em;
   width: 18em;
@@ -160,24 +158,29 @@ body {
   transition: 0.3s ease-in;
   transform: scale(1);
 }
+
 .card:hover {
   transform: translateY(-10px);
 }
+
 .cardtop {
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
 }
+
 .cardtop img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .card h3 {
   color: #fff;
   margin: 0.9em 0;
 }
+
 .card p {
   color: #808080;
   font-size: 0.8rem;
@@ -196,6 +199,7 @@ body {
   margin: 1em;
   transition: 0.2s ease-in;
 }
+
 .links:hover {
   background-color: green;
 }
@@ -206,6 +210,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .skillcontaienr {
   display: flex;
   flex-wrap: wrap;
@@ -213,13 +218,10 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .skillcontaienr .skill {
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #243b55,
-    #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #141e30;
+  background: -webkit-linear-gradient(to bottom, #243b55, #141e30);
   background: linear-gradient(to bottom, #243b55, #141e30);
   padding: 5px 10px;
   filter: drop-shadow(10px 5px 15px #000000c5);
@@ -227,18 +229,22 @@ body {
   color: #0062e4;
   cursor: pointer;
 }
-.skill-details{
+
+.skill-details {
   color: #fff;
   text-align: left;
   margin: 30px 0;
 }
-.skill-details ul li{
+
+.skill-details ul li {
   line-height: 2.1;
 }
-.degree{
+
+.degree {
   color: #808080;
 }
-.card2{
+
+.card2 {
   border-radius: 50%;
   border: none;
   display: flex;
@@ -247,32 +253,191 @@ body {
   text-align: center;
   width: 400px;
   height: 400px;
- 
 }
-.cardtop2{
+
+.cardtop2 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   filter: drop-shadow(5px 8px 20px #000);
 }
-@media only screen and (max-width: 600px) {
-  /* Adjust styles for small screens (mobile) */
-  .cardcontainer {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: center; /* Center items on small screens */
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container nav a {
+    font-size: 0.9rem;
+  }
+
+  .nav-itemholder {
+    width: 100%;
+    flex-direction: column;
     gap: 15px;
   }
-  .container nav a {
-    font-size: 1rem;
+
+  .imagecontainer {
+    height: 300px;
   }
-  .container nav a {
-    font-size: 0.7rem;
-  }
+
   .fadeimg {
-    mix-blend-mode: screen;
     right: 0;
     opacity: 0.6;
     transform: translate(30%, -50%);
   }
- 
+
+  .context h1 {
+    font-size: 2.5rem;
+  }
+
+  .context p {
+    font-size: 1rem;
+  }
+
+  .subcontext p {
+    padding: 0 1.5em;
+    width: 90vw;
+  }
+
+  .maincourses {
+    margin-top: 4%;
+  }
+
+  .card {
+    height: 18em;
+    width: 16em;
+  }
+
+  .card p {
+    font-size: 0.7rem;
+  }
+
+  .skillcontaienr .skill {
+    padding: 3px 8px;
+  }
+
+  .skill-details ul li {
+    line-height: 1.8;
+  }
+
+  .card2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardtop2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container nav a {
+    font-size: 0.7rem;
+  }
+
+  .nav-itemholder {
+    gap: 10px;
+  }
+
+  .context h1 {
+    font-size: 2rem;
+  }
+
+  .context p {
+    font-size: 0.9rem;
+  }
+
+  .subcontext p {
+    padding: 0 1em;
+    width: 100vw;
+  }
+
+  .card {
+    height: 16em;
+    width: 14em;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.6rem;
+  }
+
+  .links {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+
+  .skillcontaienr .skill {
+    padding: 2px 6px;
+  }
+
+  .skill-details ul li {
+    line-height: 1.6;
+  }
+
+  .card2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cardtop2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 40px 60px;
+  }
+
+  .container nav a {
+    font-size: 1.2rem;
+  }
+
+  .context h1 {
+    font-size: 3.5rem;
+  }
+
+  .context p {
+    font-size: 1.2em;
+  }
+
+  .maincourses h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    height: 22em;
+    width: 20em;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .skillcontaienr .skill {
+    padding: 6px 12px;
+  }
+
+  .skill-details ul li {
+    line-height: 2.3;
+  }
+
+  .card2 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .cardtop2 {
+    width: 300px;
+    height: 300px;
+  }
 }
